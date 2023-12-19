@@ -1,4 +1,4 @@
-from selenium import webdriver
+from selenium_test import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -23,6 +23,7 @@ if driver.find_element(By.CLASS_NAME, block_class):
     # Find the questions
     questions_answers = driver.find_elements(By.CLASS_NAME, block_Exercice)
     audio_subtitles_track = driver.find_elements(By.XPATH, '//track[@kind="subtitles"]')
+    
     for question_answer in questions_answers:
         
         # redirect the output in a txt file and add to this file the question and the answer
